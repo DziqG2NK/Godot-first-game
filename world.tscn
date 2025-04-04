@@ -1,6 +1,15 @@
-[gd_scene format=3 uid="uid://d4ih345qkhl0e"]
+[gd_scene load_steps=4 format=3 uid="uid://d4ih345qkhl0e"]
+
+[ext_resource type="PackedScene" uid="uid://dti3abp5sairp" path="res://player/player.tscn" id="1_f3sb7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
+size = Vector2(912.5, 49.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
+size = Vector2(23.625, 147.875)
 
 [node name="World" type="Node2D"]
+position = Vector2(129, -4)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 96.0
@@ -8,3 +17,21 @@ offset_top = 34.0
 offset_right = 332.0
 offset_bottom = 111.0
 text = "To jest jakaś labelka"
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." instance=ExtResource("1_f3sb7")]
+position = Vector2(292, 197)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(326, 282)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(769, 182)
+shape = SubResource("RectangleShape2D_tlwt5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-118, 183)
+shape = SubResource("RectangleShape2D_tlwt5")
