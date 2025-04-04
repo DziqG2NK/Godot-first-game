@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d4ih345qkhl0e"]
+
+[node name="World" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 34.0
+offset_right = 332.0
+offset_bottom = 111.0
+text = "To jest jakaś labelka"
